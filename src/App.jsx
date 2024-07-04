@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="top-left-text">HOWCS.COM</div>
       <div className="centered-text">
-        <span className="welcome-text">W E L C O M E  T O</span>
+        <span className="welcome-text">W E L C O M E &nspb; T O</span>
         <div className="howcs-text">HOWCS.COM</div>
         <div className="center-line"></div>
         <div className="subtitle-text">
