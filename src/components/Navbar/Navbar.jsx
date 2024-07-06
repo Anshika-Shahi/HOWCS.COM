@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
+import {Links} from '../../constants';
 import './Navbar.css';
 
 const Navbar = () => {
-  let Links = [
-    { name: 'HOME', link: '/' },
-    { name: 'RESOURCES', link: '/' },
-    { name: 'ABOUT US', link: '/' },
-    // { name: 'BLOGS', link: '/' },
-    // { name: 'CONTACT', link: '/' },
-  ];
+
   let [open, setOpen] = useState(false);
 
   return (
-    <div className='w-screen border-opacity-50 fixed h-24 top-5 left-0'>
+    <div className='navbar w-screen fixed h-20 top-0 left-0'>
       <div className='md:flex items-center justify-between py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer md:ml-32 text-white font-[Poppins] text-gray-800'>
           HOWCS
         </div>
 
-        <div onClick={() => setOpen(!open)} className='text-3xl text-white absolute right-8 top-4 cursor-pointer md:hidden'>
+        <div onClick={() => setOpen(!open)} className='text-3xl text-white absolute right-8 top-6 cursor-pointer  md:hidden'>
           <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
         </div>
 
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 md:bg-opacity-0 bg-opacity-50 bg-white  text-b absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={`navdrop md:flex md:items-center text-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto  transition-all duration-500 ease-i bg-opacity-90 backdrop-blur-lg md:bg-none md:backdrop-blur-none ${
             open ? 'top-20 ' : 'top-[-490px]'
           }`}
         >
